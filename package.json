@@ -8,14 +8,17 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "poku"
+    "test": "npx poku --isolation=none"
   },
   "dependencies": {
+    "lucide-react": "^1.14.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@happy-dom/global-registrator": "^20.9.0",
+    "@pokujs/react": "^1.5.1",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -24,6 +27,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
+    "happy-dom": "^20.9.0",
     "poku": "^4.3.0",
     "tsx": "^4.21.0",
     "typescript": "~6.0.2",
