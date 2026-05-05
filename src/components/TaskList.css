@@ -4,10 +4,43 @@
   gap: 2rem;
 }
 
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
 .task-list-header h2 {
-  margin: 0 0 0.5rem 0;
+  margin: 0;
   font-size: 1.5rem;
   color: var(--text-main);
+}
+
+.total-counter-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 99px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.badge-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.badge-value {
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+  min-width: 1rem;
+  text-align: center;
 }
 
 .task-list-header p {

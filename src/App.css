@@ -19,33 +19,31 @@ body {
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
 }
-
 .app-main {
   min-height: 100vh;
   display: flex;
+  align-items: center; /* Centraliza verticalmente */
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .app-background {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0) 50%);
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
   z-index: -1;
   pointer-events: none;
 }
 
 .app-content {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   animation: fadeIn 0.5s ease-out;
 }
 
@@ -54,12 +52,15 @@ body {
 }
 
 .app-header h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: 800;
   margin: 0;
-  padding-bottom: 0.2em;
-  line-height: 1.2;
+  line-height: 1.1;
   background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
 }

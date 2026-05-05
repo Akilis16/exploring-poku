@@ -1,17 +1,14 @@
-import { useState } from "react";
+import React from 'react';
 
-export function Counter() {
-    const [count, setCount] = useState(0);
+interface CounterProps {
+  count: number;
+}
 
-    return (
-        <div>
-            <button
-                type="button"
-                className="counter"
-                onClick={() => setCount((count) => count + 1)}
-            >
-                Count is {count}
-            </button>
-        </div>
-    );
+export function Counter({ count }: CounterProps) {
+  return (
+    <div className="total-counter-badge" data-testid="total-counter">
+      <span className="badge-label">Total Items</span>
+      <span className="badge-value">{count}</span>
+    </div>
+  );
 }

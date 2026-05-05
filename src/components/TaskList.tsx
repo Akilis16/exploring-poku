@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TaskItem } from './TaskItem';
+import { Counter } from './counter';
 import { PlusCircle } from 'lucide-react';
 import { formatUserName } from '../utils/formatters';
 
@@ -31,6 +32,8 @@ export function TaskList() {
       // AQUI ESTÁ O PONTO CHAVE: Aplicamos o formatador externo.
       // É por isso que no teste buscamos por 'NEW TASK' e não pelo valor bruto.
       title: formatUserName(inputValue),
+      
+      // title: inputValue.trim(), // Forçando falha de teste de componentes - Removendo o formatador.
     };
     
     // Atualiza a lista adicionando o novo item ao final do array
@@ -50,7 +53,10 @@ export function TaskList() {
   return (
     <div className="task-list-container">
       <header className="task-list-header">
-        <h2>My Items</h2>
+        <div className="header-main">
+          <h2>My Items</h2>
+          <Counter count={tasks.length} />
+        </div>
         <p>Manage your items and track quantities</p>
       </header>
       
